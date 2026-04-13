@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - City Hospital{% endblock %}
+
+{% block content %}
+<div class="row text-center mt-5">
+    <div class="col-md-12">
+        <h1 class="display-4 fw-bold">Welcome to City Hospital</h1>
+        <p class="lead mt-3">Providing World-Class Healthcare Services to Our Community.</p>
+        <a href="{% url 'booking' %}" class="btn btn-primary btn-lg mt-4">Book an Appointment Today</a>
+    </div>
+</div>
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card p-3 shadow-sm text-center">
+            <h3>Expert Doctors</h3>
+            <p>Our team consists of highly qualified professionals.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-3 shadow-sm text-center">
+            <h3>Modern Facilities</h3>
+            <p>We use the latest technology for treatments.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-3 shadow-sm text-center">
+            <h3>24/7 Care</h3>
+            <p>Emergency services available around the clock.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Book an Appointment - City Hospital{% endblock %}
+
+{% block content %}
+<div class="row mt-4">
+    <div class="col-md-6 mx-auto">
+        <h2 class="text-center mb-4">Make An Appointment</h2>
+
+        <div class="card shadow-sm p-4">
+            <!-- A beginner-friendly HTML form using standard Bootstrap -->
+            <form method="POST" action="">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="p_name" class="form-label">Patient Name*</label>
+                    <input type="text" class="form-control" id="p_name" name="p_name" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="p_phone" class="form-label">Phone Number*</label>
+                    <input type="tel" class="form-control" id="p_phone" name="p_phone" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="p_email" class="form-label">Email Address*</label>
+                    <input type="email" class="form-control" id="p_email" name="p_email" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="doc_name" class="form-label">Select Doctor*</label>
+                    <select class="form-select" id="doc_name" name="doc_name" required>
+                        <option value="">Choose...</option>
+                        <option value="Dr. Mammootty">Dr. Geo(Dermatologist)</option>
+                        <option value="Dr. Mohanlal">Dr. Khan(Psychologist)</option>
+                        <option value="Dr. Prithviraj">Dr. Harry(Neurologist)</option>
+                        <option value="Dr. Fahad Fazil">Dr. Finn(Cardiologist)</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="booking_date" class="form-label">Booking Date*</label>
+                    <input type="date" class="form-control" id="booking_date" name="booking_date" required>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary w-100">Submit Request</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
